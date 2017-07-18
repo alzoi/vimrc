@@ -7,6 +7,12 @@
 set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
+
+" Mouse
+set mouse=a
+map <S-Insert> <MiddleMouse>
+map! <S-Insert> <MiddleMouse>
+
 " disable vi compatibility (emulation of old bugs)
 set nocompatible
 " use indentation of previous line
