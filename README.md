@@ -22,5 +22,5 @@
 Структуры данных:
 1) односвязный список
 
-http://victor192007.narod.ru/files/cpp_d1.html
+http://victor192007.narod.ru/files/cpp_d1.html  
 https://www.youtube.com/watch?v=XmuZ_U_GLYY
