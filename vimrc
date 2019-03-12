@@ -1,14 +1,32 @@
+" Совместимость клавиш с Windows.
+source $VIMRUNTIME/mswin.vim   
+
 " Шрифт для gvim
 set guifont=Courier_New:h12:cDEFAULT
 
 " Отключаем режим совместимости с классическим vi (для корректной работы стрелок)
 set nocompatible
+
+" Выключаем резервные файлы.
+set nobackup
+set noswapfile
+
+" Колоночка, чтобы показывать плюсики для скрытия блоков кода.
+set foldcolumn=1
+
+" Вырубаем черточки на табах
+set showtabline=0
+
 " Чтобы работала кнопка (Backspace) со стрелкой для удаления впереди стоящих символов.
-set backspace=2
-" Для FreeBSD настройка отображения русских символов в кодировке utf-8 (но не работает).
-"set fileencoding=utf-8
-"set encoding=utf-8
-"set termencoding=koi8-r
+"set backspace=2
+set backspace=indent,eol,start whichwrap+=<,>,[,]
+
+" Кодировка по умолчанию.
+set encoding=utf-8
+
+"Включаем 256 цветов в терминале.
+set t_Co=256
+
 " Вместо писка бипером мигать курсором при ошибках ввода
 set novisualbell
 set t_vb=
@@ -30,8 +48,7 @@ set hidden
 set tags+=/root/tags
 " Включаем нумерацию строк.
 set nu
-" Не создавать файлы с резервной копией.
-set nobackup
+
 " Сохранять историю команд 100 строк.
 set history=100
 " Цветовая схема.
