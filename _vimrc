@@ -1,3 +1,5 @@
+" Конфигурация для gvim 8.1.282.0
+
 " Кодировка по умолчанию.
 set encoding=utf-8
 set fileencoding=utf-8
