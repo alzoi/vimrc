@@ -138,3 +138,8 @@ vmap <C-C> y<CR>
 " Вырезать текст в визуальном режиме.
 vmap <C-x> d<CR>
 vmap <C-X> d<CR>
+
+" Скрыть меню, инструменты, скролл.
+"set guioptions-=r
+"set guioptions-=m
+set guioptions-=T  
