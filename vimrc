@@ -1,3 +1,7 @@
+" Кодировка по умолчанию.
+set encoding=utf-8
+set fileencoding=utf-8
+
 " Совместимость клавиш с Windows.
 source $VIMRUNTIME/mswin.vim   
 
@@ -20,9 +24,6 @@ set showtabline=0
 " Чтобы работала кнопка (Backspace) со стрелкой для удаления впереди стоящих символов.
 "set backspace=2
 set backspace=indent,eol,start whichwrap+=<,>,[,]
-
-" Кодировка по умолчанию.
-set encoding=utf-8
 
 "Включаем 256 цветов в терминале.
 set t_Co=256
