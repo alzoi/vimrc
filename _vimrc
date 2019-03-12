@@ -4,11 +4,10 @@
 set encoding=utf-8
 set fileencoding=utf-8
 
-" Совместимость клавиш с Windows.
-source $VIMRUNTIME/mswin.vim
-
 " Отключаем режим совместимости с классическим vi (для корректной работы стрелок)
 set nocompatible
+" Совместимость клавиш с Windows.
+source $VIMRUNTIME/mswin.vim
 behave mswin
 
 " Шрифт для gvim
