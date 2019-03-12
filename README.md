@@ -26,6 +26,7 @@ chcp 1251
 ```
 
 # Установка
+https://habr.com/ru/post/74128/
 https://leonid.shevtsov.me/post/luchshiy-tekstovyy-redaktor-dlya-windows-eto-vim/
 
 Структуры данных:
