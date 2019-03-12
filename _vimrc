@@ -1,4 +1,8 @@
+"=====================================================================================
 " Конфигурация для gvim 8.1.282.0
+" Файл должен находиться в папке $HOME/_vimrc или $VIM/_vimrc
+" Команда для проверки значения переменной :echo $VIM
+"=====================================================================================
 
 " Кодировка по умолчанию.
 set encoding=utf-8
@@ -16,29 +20,37 @@ set guifont=Courier_New:h12:cDEFAULT
 " Чтобы работала кнопка (Backspace) со стрелкой для удаления впереди стоящих символов.
 set backspace=2
 
-" Включаем проверку синтаксиса.
-syntax on
-
 " Включаем поддержку мыши (set mouse= чтобы отключить мышь).
 set mouse=a
-
 " Прятать мышь в режиме ввода.
 set mousehide
 
 " Используем системный буфер.
 set clipboard=unnamed
 
+" Свободное перемещение курсора по файлу
+set virtualedit=all
+" Постоянно показывать позицию курсора.
+set ruler
+" Убирать заставку при старте.
+set shortmess+=tToOI
+" Отключаем перенос строк.
+set nowrap
+
+" Включаем проверку синтаксиса.
+syntax on
+
 " Включаем нумерацию строк.
 set nu
 
 " Сохранять по нажатию Ctrl+S
-noremap		<silent> <C-S>          :update<CR>
-vnoremap	<silent> <C-S>         <C-C>:update<CR>
-inoremap	<silent> <C-S>         <C-O>:update<CR>
+noremap <silent> <C-S>			:update<CR>
+vnoremap  <silent> <C-S>       <C-C>:update<CR>
+inoremap  <silent> <C-S>       <C-O>:update<CR>
 
 " Отступы блоков кода Tab и Shift+Tab
-vnoremap <Tab> >
-vnoremap <S-Tab> <
+vnoremap <Tab>		>
+vnoremap <S-Tab>	<
 
 " Отступы блоков кода стрелками > <
 "vnoremap < <gv
@@ -60,14 +72,6 @@ set ai
 "set ci
 " Включаем умный автоотступ (set nosi для отключений).
 set si
-" Свободное перемещение курсора по файлу
-set virtualedit=all
-" Постоянно показывать позицию курсора.
-set ruler
-" Убирать заставку при старте.
-set shortmess+=tToOI
-" Отключаем перенос строк.
-set nowrap
 
 " Включаем поддержку 256 цветов.
 set t_Co=256
