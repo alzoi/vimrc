@@ -89,3 +89,6 @@ set ignorecase
 "set guioptions-=m
 set guioptions-=T
 "set guioptions-=r
+
+" Меняем цвет символа ~ и фона для зоны отсутствия текста.
+hi NonText guifg=grey30 guibg=grey30
