@@ -84,3 +84,8 @@ set incsearch
 set nohlsearch
 " Игнорировать регистр символов при поиске.
 set ignorecase
+
+" Отключить меню, инструменты, прокрутку.
+"set guioptions-=m
+set guioptions-=T
+"set guioptions-=r
