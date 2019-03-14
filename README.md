@@ -36,5 +36,5 @@ https://www.youtube.com/watch?v=XmuZ_U_GLYY
 
 
 # Visual Studio Code
-Плагин называется Markdown MPE Preview
+Плагин называется Markdown MPE Preview 
 https://habr.com/ru/company/yamoney/blog/442666/
