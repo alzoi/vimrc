@@ -33,3 +33,8 @@ https://leonid.shevtsov.me/post/luchshiy-tekstovyy-redaktor-dlya-windows-eto-vim
 1) односвязный список  
 http://victor192007.narod.ru/files/cpp_d1.html  
 https://www.youtube.com/watch?v=XmuZ_U_GLYY
+
+
+# Visual Studio Code
+Плагин называется Markdown MPE Preview
+https://habr.com/ru/company/yamoney/blog/442666/
