@@ -30,7 +30,9 @@ https://habr.com/ru/post/74128/
 https://leonid.shevtsov.me/post/luchshiy-tekstovyy-redaktor-dlya-windows-eto-vim/  
 Удобная консоль в Windows  
 https://vladimir-rodin.com/blog/post/windows-console  
-https://git-scm.com/downloads
+https://git-scm.com/downloads  
+https://github.com/mokevnin/dotfiles/blob/master/files/vimrc  
+
 
 Структуры данных:
 1) односвязный список  
