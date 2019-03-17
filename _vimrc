@@ -16,6 +16,7 @@ behave mswin
 
 " Шрифт для gvim
 set guifont=Courier_New:h12:cDEFAULT
+"set guifont=DroidSansMono_Nerd_Font_Mono:h12:cRUSSIAN:qDRAFT
 
 " Чтобы работала кнопка (Backspace) со стрелкой для удаления впереди стоящих символов.
 set backspace=2
@@ -92,3 +93,6 @@ set guioptions-=T
 
 " Меняем цвет символа ~ и фона для зоны отсутствия текста.
 hi NonText guifg=grey30 guibg=grey30
+
+" Удаляем символ в вертикальных границах окон |.
+set fillchars+=vert:\ 
