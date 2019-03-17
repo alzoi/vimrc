@@ -44,6 +44,9 @@ https://vladimir-rodin.com/blog/post/windows-console
 https://git-scm.com/downloads  
 https://github.com/mokevnin/dotfiles/blob/master/files/vimrc  
 
+# Папка для установки плагинов
+D:\vim\vimfiles\plugged\
+
 
 Структуры данных:
 1) односвязный список  
