@@ -5,8 +5,20 @@
 "=====================================================================================
 
 " Кодировка по умолчанию.
-set encoding=utf-8
-set fileencoding=utf-8
+set encoding		=utf-8
+set fileencoding	=utf-8
+set termencoding	=utf-8
+set fileencodings	=utftf8
+set encoding		=utf-8
+scriptencoding utf-8
+
+" Менеджер плагинов vim-plug (установка командой PlugInstall):
+call plug#begin('D:\vim\vimfiles\plugged')
+	" - проводник по файловой системе.
+	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+	" - значки
+	Plug 'ryanoasis/vim-devicons'
+call plug#end()
 
 " Отключаем режим совместимости с классическим vi (для корректной работы стрелок)
 set nocompatible
@@ -14,9 +26,8 @@ set nocompatible
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-" Шрифт для gvim
-set guifont=Courier_New:h12:cDEFAULT
-"set guifont=DroidSansMono_Nerd_Font_Mono:h12:cRUSSIAN:qDRAFT
+" Шрифты для gvim
+set guifont=DroidSansMono_Nerd_Font_Mono:h12:cRUSSIAN:qDRAFT,Courier_New:h12:cDEFAULT
 
 " Чтобы работала кнопка (Backspace) со стрелкой для удаления впереди стоящих символов.
 set backspace=2
@@ -45,9 +56,9 @@ syntax on
 set nu
 
 " Сохранять по нажатию Ctrl+S
-noremap <silent> <C-S>			:update<CR>
-vnoremap  <silent> <C-S>       <C-C>:update<CR>
-inoremap  <silent> <C-S>       <C-O>:update<CR>
+noremap	<silent> <C-S>		:update<CR>
+vnoremap	<silent> <C-S>		<C-C>:update<CR>
+inoremap	<silent> <C-S>		<C-O>:update<CR>
 
 " Отступы блоков кода Tab и Shift+Tab
 vnoremap <Tab>		>
@@ -86,13 +97,39 @@ set nohlsearch
 " Игнорировать регистр символов при поиске.
 set ignorecase
 
-" Отключить меню, инструменты, прокрутку.
+" Скрыть меню, инструменты, скролл.
+"set guioptions-=r
 "set guioptions-=m
 set guioptions-=T
-"set guioptions-=r
 
 " Меняем цвет символа ~ и фона для зоны отсутствия текста.
 hi NonText guifg=grey30 guibg=grey30
 
-" Удаляем символ в вертикальных границах окон |.
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
+
+" Удаляем символ | в вертикальных границах окон.
 set fillchars+=vert:\ 
+" Скрываем полосу прокрутки дерева NERD.
+set guioptions-=L
+
+" Плагин Дерево папок.
+map <F3> :NERDTreeToggle<CR>
+
+" Начальная ширина дерева NERD
+let g:NERDTreeWinSize = 20
+
+" Закрыть NERDtree, когда файлы были открыты
+"let g:NERDTreeQuitOnOpen = 1
+
+" Показать NERDTree закладкиi
+"let g:NERDTreeShowBookmarks = 1
+
+" Отображение стрелок вместо ascii art в NERDTree
+"let g:NERDTreeDirArrows = 0
+
+" Изменить текущий рабочий каталог на основе корневого каталога в NERDTree
+let g:NERDTreeChDirMode = 2
+
+" Запустите NERDTree в режиме минимального интерфейса (без справочных строк)
+let g:NERDTreeMinimalUI = 1
