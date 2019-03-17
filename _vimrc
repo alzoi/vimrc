@@ -18,6 +18,7 @@ call plug#begin('D:\vim\vimfiles\plugged')
 	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 	" - значки
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'morhetz/gruvbox'
 call plug#end()
 
 " Отключаем режим совместимости с классическим vi (для корректной работы стрелок)
@@ -38,7 +39,7 @@ set mouse=a
 set mousehide
 
 " Используем системный буфер.
-set clipboard=unnamed
+"set clipboard=unnamed
 
 " Свободное перемещение курсора по файлу
 set virtualedit=all
@@ -74,7 +75,7 @@ set history=200
 " Размер табуляции.
 set tabstop=3
 " Число пробелов, используемых при автоотступе.
-set shiftwidth=3
+set shiftwidth=3     
 
 " Включаем плагин определения типа файла.
 filetype plugin on
@@ -87,8 +88,21 @@ set si
 
 " Включаем поддержку 256 цветов.
 set t_Co=256
+
+" Удаляем символ | в вертикальных границах окон.
+set fillchars+=vert:\ 
+let g:gruvbox_vert_split='bg2'
+let g:gruvbox_guisp_fallback='NONE'
+" Скрываем полосу прокрутки дерева NERD.
+set guioptions-=L
+
 " Цветовая схема
-colorscheme desert
+"colorscheme desert
+colorscheme gruvbox
+set background=dark
+
+" Меняем цвет символа ~ и фона для зоны отсутствия текста.
+hi NonText guifg=grey16 guibg=grey16
 
 " Показывать первое совпадение при наборе шаблона.
 set incsearch
@@ -102,16 +116,8 @@ set ignorecase
 "set guioptions-=m
 set guioptions-=T
 
-" Меняем цвет символа ~ и фона для зоны отсутствия текста.
-hi NonText guifg=grey30 guibg=grey30
-
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
-
-" Удаляем символ | в вертикальных границах окон.
-set fillchars+=vert:\ 
-" Скрываем полосу прокрутки дерева NERD.
-set guioptions-=L
 
 " Плагин Дерево папок.
 map <F3> :NERDTreeToggle<CR>
