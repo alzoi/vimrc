@@ -13,7 +13,7 @@ set encoding		=utf-8
 scriptencoding utf-8
 
 " Добавляем путь к каталогу плагинов.
-set runtimepath^=D:\vim\vimfiles\plugged
+set runtimepath^=$VIMRUNTIME\vimfiles\plugged
 
 " Менеджер плагинов vim-plug (установка командой PlugInstall):
 call plug#begin('D:\vim\vimfiles\plugged')
