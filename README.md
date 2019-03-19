@@ -37,6 +37,7 @@ chcp 1251
 
 
 # Установка
+https://github.com/amix/vimrc
 https://habr.com/ru/post/74128/  
 https://leonid.shevtsov.me/post/luchshiy-tekstovyy-redaktor-dlya-windows-eto-vim/  
 Удобная консоль в Windows  
