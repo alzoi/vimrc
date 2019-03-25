@@ -179,3 +179,6 @@ inoremap <C-space> <C-N>
 ":map <F8> :vertical wincmd f<CR>
 " Открывать файл под курсором при двойном клике по строке в том же окне.
 map <2-LeftMouse> gf<CR>
+
+" Автодополнение в командной строке.
+:set wildmenu 
