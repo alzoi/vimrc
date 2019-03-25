@@ -37,11 +37,11 @@ source $VIMRUNTIME/mswin.vim
 behave mswin
 
 " Шрифты для gvim
-set guifont=DroidSansMono_Nerd_Font_Mono:h12:cRUSSIAN:qDRAFT,Courier_New:h12:cDEFAULT
+set guifont=Courier_New:h12:cDEFAULT,DroidSansMono_Nerd_Font_Mono:h12:cRUSSIAN:qDRAFT
 
 " Чтобы работала кнопка (Backspace) со стрелкой для удаления впереди стоящих символов.
 "set backspace=2
-set backspace=indent,eol,start
+"set backspace=indent,eol,start
 
 " Выключаем резервные копии файлов.
 set nobackup        
@@ -57,12 +57,12 @@ set hidden
 set showtabline=0
 
 " Включаем поддержку мыши (set mouse= чтобы отключить мышь).
-set mouse=a
+"set mouse=a
 " Прятать мышь в режиме ввода.
-set mousehide
+"set mousehide
 
-" Используем системный буфер.
-set clipboard=unnamed
+" Используем системный буфер (не включать, так как копирует данные при удалении). 
+"set clipboard=unnamed
 
 " Включаем подсветку строки.
 set cursorline
@@ -142,8 +142,8 @@ set ignorecase
 "set guioptions-=m
 set guioptions-=T
 
-"let g:NERDTreeDirArrowExpandable = ''
-"let g:NERDTreeDirArrowCollapsible = ''
+"let g:NERDTreeDirArrowExpandable = '>'
+"let g:NERDTreeDirArrowCollapsible = '*'
 
 " Плагин Дерево папок.
 map <F3> :NERDTreeToggle<CR>
