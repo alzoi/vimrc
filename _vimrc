@@ -18,6 +18,9 @@ let $PATH .= ';D:\Temp\include;'
 " Добавляем путь к каталогу плагинов.
 "set runtimepath^=$VIMRUNTIME/_vim/pack/
 
+" При ручной установке, плагины должны быть расположены в папке (получить значение переменной :echo $VIMRUNTIME)
+" $VIMRUNTIME\vimfiles\pack\plugin\start
+
 " Менеджер плагинов vim-plug (установка командой PlugInstall):
 "call plug#begin('D:\vim\vimfiles\plugged')
 	" - проводник по файловой системе.
