@@ -12,21 +12,20 @@ set fileencodings	=utftf8
 set encoding		=utf-8
 scriptencoding utf-8
 
-" Добавляем путь к каталогу плагинов.
-"set runtimepath^=$VIMRUNTIME\vimfiles\plugged
+" Добавляем список папок для поиска файлов.
+let $PATH .= ';D:\Temp\include;'
 
-" При ручной установке, плагины должны находиться в папке
-" $VIMRUNTIME\vimfiles\pack\plugin\start\
-" echo $VIMRUNTIME - папка установки vim
+" Добавляем путь к каталогу плагинов.
+"set runtimepath^=$VIMRUNTIME/_vim/pack/
 
 " Менеджер плагинов vim-plug (установка командой PlugInstall):
-call plug#begin('D:\vim\vimfiles\plugged')
+"call plug#begin('D:\vim\vimfiles\plugged')
 	" - проводник по файловой системе.
-	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"	Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 	" - значки
-	Plug 'ryanoasis/vim-devicons'
-	Plug 'morhetz/gruvbox'
-call plug#end()
+"	Plug 'ryanoasis/vim-devicons'
+"	Plug 'morhetz/gruvbox'
+"call plug#end()
 
 " Отключаем режим совместимости с классическим vi (для корректной работы стрелок)
 set nocompatible
@@ -38,7 +37,21 @@ behave mswin
 set guifont=DroidSansMono_Nerd_Font_Mono:h12:cRUSSIAN:qDRAFT,Courier_New:h12:cDEFAULT
 
 " Чтобы работала кнопка (Backspace) со стрелкой для удаления впереди стоящих символов.
-set backspace=2
+"set backspace=2
+set backspace=indent,eol,start
+
+" Выключаем резервные копии файлов.
+set nobackup        
+set noswapfile
+
+" Не выгружать буфер, когда переключаемся на другой (чтобы не сохранять файл).
+set hidden
+
+" Колоночка, чтобы показывать плюсики для скрытия блоков кода.
+"set foldcolumn=1
+
+" Отключаем черточки на табах.
+set showtabline=0
 
 " Включаем поддержку мыши (set mouse= чтобы отключить мышь).
 set mouse=a
@@ -46,10 +59,13 @@ set mouse=a
 set mousehide
 
 " Используем системный буфер.
-"set clipboard=unnamed
+set clipboard=unnamed
+
+" Включаем подсветку строки.
+set cursorline
 
 " Свободное перемещение курсора по файлу
-set virtualedit=all
+"set virtualedit=all
 " Постоянно показывать позицию курсора.
 set ruler
 " Убирать заставку при старте.
@@ -106,10 +122,10 @@ set guioptions-=L
 " Цветовая схема
 "colorscheme desert
 colorscheme gruvbox
-set background=dark
+set background=light
 
 " Меняем цвет символа ~ и фона для зоны отсутствия текста.
-hi NonText guifg=grey16 guibg=grey16
+"hi NonText guifg=grey16 guibg=grey16
 
 " Показывать первое совпадение при наборе шаблона.
 set incsearch
@@ -123,8 +139,8 @@ set ignorecase
 "set guioptions-=m
 set guioptions-=T
 
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+"let g:NERDTreeDirArrowExpandable = ''
+"let g:NERDTreeDirArrowCollapsible = ''
 
 " Плагин Дерево папок.
 map <F3> :NERDTreeToggle<CR>
@@ -146,3 +162,15 @@ let g:NERDTreeChDirMode = 2
 
 " Запустите NERDTree в режиме минимального интерфейса (без справочных строк)
 let g:NERDTreeMinimalUI = 1
+
+" Отмена автоматической вставки комментариев.
+augroup auto_comment
+	au!
+	au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+augroup END
+
+" Переназначаем автодополнение кода по нажатию Ctrl+Space.
+inoremap <C-space> <C-N>
+
+" Открывать файл под курсором в новом окне.
+:map <F8> :vertical wincmd f<CR>
