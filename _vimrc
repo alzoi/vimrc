@@ -12,11 +12,11 @@ set fileencodings	=utftf8
 set encoding		=utf-8
 scriptencoding utf-8
 
-" Добавляем список папок для поиска файлов.
+" Изменяем значение системной переменной.
 let $PATH .= ';D:\Temp\include;'
 
-" Добавляем путь к каталогу плагинов.
-"set runtimepath^=$VIMRUNTIME/_vim/pack/
+" Добавляем список папок для поиска файлов (3 уровня вложенности).
+set path += .\include\**3
 
 " При ручной установке, плагины должны быть расположены в папке (получить значение переменной :echo $VIMRUNTIME)
 " $VIMRUNTIME\vimfiles\pack\plugin\start
