@@ -176,4 +176,6 @@ augroup END
 inoremap <C-space> <C-N>
 
 " Открывать файл под курсором в новом окне.
-:map <F8> :vertical wincmd f<CR>
+":map <F8> :vertical wincmd f<CR>
+" Открывать файл под курсором при двойном клике по строке в том же окне.
+map <2-LeftMouse> gf<CR>
