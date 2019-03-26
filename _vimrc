@@ -16,7 +16,7 @@ scriptencoding utf-8
 let $PATH .= ';D:\Temp\include;'
 
 " Добавляем список папок для поиска файлов (3 уровня вложенности).
-set path += .\include\**3
+set path+=.\include\**3
 
 " При ручной установке, плагины должны быть расположены в папке (получить значение переменной :echo $VIMRUNTIME)
 " $VIMRUNTIME\vimfiles\pack\plugin\start
@@ -184,4 +184,4 @@ map <2-LeftMouse> gf<CR>
 :set wildmenu 
 
 " Включить подробности о работе команды.
-:set vbs=3
+":set vbs=3
