@@ -186,31 +186,35 @@ map <2-LeftMouse> gf<CR>
 " Включить подробности о работе команды.
 ":set vbs=3
 
-" Функция выполняет комментирование блока кода в зависимости от расширения файла.
+" Функция выполняет коментирование блока кода в зависимости от расширения файла.
+" https://vim.fandom.com/wiki/Comment_%26_Uncomment_multiple_lines_in_Vim
 function! Comment()
-	let ext = tolower(expand('%:e'))
-	if ext == 'php' || ext == 'rb' || ext == 'sh' || ext == 'py'
+	let ft = &filetype
+	if ft == 'php' || ft == 'ruby' || ft == 'sh' || ft == 'make' || ft == 'python' || ft == 'perl'
 		silent s/^/\#/
-	elseif ext == 'js' || ext == 'c' || ext == 'cpp'
-   	silent s:^:\/\/:g
-	elseif ext == 'vim'
-   	silent s:^:\":g
+	elseif ft == 'javascript' || ft == 'c' || ft == 'cpp' || ft == 'java' || ft == 'objc' || ft == 'scala' || ft == 'go'
+		silent s:^:\/\/:g
+	elseif ft == 'tex'
+		silent s:^:%:g
+	elseif ft == 'vim'
+		silent s:^:\":g
 	endif
 endfunction
 
-" Функция выполняет раскомментирование блока кода в зависимости от расширения файла.
+" Функция выполняет раскоментирование блока кода в зависимости от расширения файла.
 function! Uncomment()
-	let ext = tolower(expand('%:e'))
-	if ext == 'php' || ext == 'rb' || ext == 'sh' || ext == 'py'
-   	silent s/^\#//
-	elseif ext == 'js' || ext == 'c' || ext == 'cpp'
-   	silent s:^\/\/::g
-	elseif ext == 'vim'
-   	silent s:^\"::g
+	let ft = &filetype
+	if ft == 'php' || ft == 'ruby' || ft == 'sh' || ft == 'make' || ft == 'python' || ft == 'perl'
+		silent s/^\#//
+	elseif ft == 'javascript' || ft == 'c' || ft == 'cpp' || ft == 'java' || ft == 'objc' || ft == 'scala' || ft == 'go'
+		silent s:^\/\/::g
+	elseif ft == 'tex'
+		silent s:^%::g
+	elseif ft == 'vim'
+		silent s:^\"::g
 	endif
 endfunction
 
 "source ~/vcomments.vim
-" Назначаем клавиши для комментирования и раскомментирования.
 map <C-\> :call Comment()<CR>
 map <C-Q> :call Uncomment()<CR>
