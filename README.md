@@ -58,9 +58,9 @@ https://git-scm.com/downloads
 https://github.com/mokevnin/dotfiles/blob/master/files/vimrc  
 
 Папка для установки плагинов  
-'''
+```
 D:\vim\vimfiles\pack\plugin\start\
-'''
+```
 
 Структуры данных:
 1) односвязный список  
