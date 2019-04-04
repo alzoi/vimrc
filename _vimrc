@@ -136,8 +136,8 @@ set incsearch
 set nohlsearch
 " Игнорировать регистр символов при поиске.
 set ignorecase
-" Поиск слова под мышкой (Shift+Left или Right).
-set mousemodel=extend
+" Поиск слова под мышкой (Shift+Left или Right), отключает контекстное меню.
+"set mousemodel=extend
 
 " Скрыть меню, инструменты, скролл.
 "set guioptions-=r
