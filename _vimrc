@@ -146,7 +146,11 @@ set guioptions-=T
 "let g:NERDTreeDirArrowCollapsible = '*'
 
 " Плагин Дерево папок.
-map <F3> :NERDTreeToggle<CR>
+"map <F3> :NERDTreeToggle<CR>
+" Открыть текущую папку в Nerd.
+map <F3> :NERDTree<CR>
+" Показывать скрытые файлы.
+let NERDTreeShowHidden=1
 
 " Начальная ширина дерева NERD
 let g:NERDTreeWinSize = 20
