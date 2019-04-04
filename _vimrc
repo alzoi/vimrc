@@ -136,6 +136,8 @@ set incsearch
 set nohlsearch
 " Игнорировать регистр символов при поиске.
 set ignorecase
+" Поиск слова под мышкой (Shift+Left или Right).
+set mousemodel=extend
 
 " Скрыть меню, инструменты, скролл.
 "set guioptions-=r
@@ -146,10 +148,8 @@ set guioptions-=T
 "let g:NERDTreeDirArrowCollapsible = '*'
 
 " Плагин Дерево папок.
-"map <F3> :NERDTreeToggle<CR>
-" Открыть текущую папку в Nerd.
-map <F3> :NERDTree<CR>
-" Показывать скрытые файлы.
+map <F3> :NERDTreeToggle D:\tr\Projects<CR>
+" Показывать скрытые файлы с точкой.
 let NERDTreeShowHidden=1
 
 " Начальная ширина дерева NERD
