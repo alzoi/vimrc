@@ -1,6 +1,7 @@
 # .vimrc
 ## Ссылки
-https://habr.com/ru/post/486948/
+https://habr.com/ru/post/486948/  
+https://vimeo.com/showcase/2838732?page=2  
 
 ## Комбинации клавиш:
 
