@@ -1,5 +1,6 @@
 # .vimrc
 ## Ссылки
+[Up And Running With Neovim + LSP](https://www.youtube.com/watch?v=36o52-2_83M)  
 https://habr.com/ru/post/486948/  
 https://vimeo.com/showcase/2838732?page=2  
 
