@@ -1,5 +1,6 @@
 # .vimrc
 ## Ссылки
+[How to Configure Vim like VSCode](https://www.youtube.com/watch?v=gnupOrSEikQ)  
 [Up And Running With Neovim + LSP](https://www.youtube.com/watch?v=36o52-2_83M)  
 https://www.youtube.com/watch?v=gaxQoucrWrk  
 https://habr.com/ru/post/486948/  
